@@ -10,11 +10,11 @@ random_word = random_word.replace(" ", "")
 # Generate a string of all uppercase and lowercase letters, digits, and special characters
 characters = string.ascii_letters + string.digits + r"!@#$%^&*()_+-=[]{}\|;:'\"<>,.?/~`"
 
-# Check if the password length is at least 20 characters
+# Check if the password length is at least 24 characters
 if password_length < 24:
   raise ValueError("Password length should be at least 24 characters")
 
-# Check if the random word is not longer than 6 characters
+# Check if the random word is not longer than 10 characters
 if random_word and len(random_word) > 10:
   raise ValueError("Random word should be no longer than 10 characters")
 
