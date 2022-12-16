@@ -1,0 +1,5 @@
+datetime
+functions-framework
+google-cloud
+google-cloud-bigquery
+stripe
