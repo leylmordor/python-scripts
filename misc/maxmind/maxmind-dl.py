@@ -13,6 +13,7 @@ for unique_id in edition_ids:
     url = f'https://download.maxmind.com/app/geoip_download?edition_id={unique_id}&license_key={license_key}&suffix={suffix}'
     response = requests.get(url)
     response.raise_for_status()
+    print(f"Downloaded {unique_id} data")
     
     # Create a temp dir for the extracted files
     with tempfile.TemporaryDirectory() as temp_dir:
@@ -21,6 +22,7 @@ for unique_id in edition_ids:
         with open(filename, 'wb') as f:
             f.write(response.content)
         
+        print(f"Extracting {unique_id} data...")
         with tarfile.open(filename, 'r:gz') as tar:
             tar.extractall(temp_dir)
         
@@ -33,3 +35,4 @@ for unique_id in edition_ids:
                     shutil.copy(source_file, destination_file)
         
         os.remove(filename)
+        print(f"Finished processing {unique_id} data")
