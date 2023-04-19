@@ -6,7 +6,7 @@ import os
 
 
 license_key = os.environ['MAXMIND_LICENSE_KEY']
-edition_ids = ['GeoLite2-ASN', 'GeoLite2-Country']
+edition_ids = ['GeoLite2-ASN', 'GeoLite2-Country', 'GeoLite2-City']
 suffix = 'tar.gz'
 
 for unique_id in edition_ids:
