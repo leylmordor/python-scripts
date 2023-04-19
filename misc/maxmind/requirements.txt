@@ -1,0 +1,5 @@
+requests
+tarfile
+shutil
+tempfile
+os
